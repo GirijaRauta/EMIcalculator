@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+    <div align="center">
+    <b><h1>EMI Calculator</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" style="background-color: green; color: white; padding: 10px 15px;">
+            Calculte EMI
+    </form>
+    {% if emi is not None %}
+        <h3>emi: {{ emi }}</h3>
+    {% endif %}
+</body>
+</html>
